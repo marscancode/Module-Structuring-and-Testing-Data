@@ -43,5 +43,9 @@ test("correctly convert half hour after 12:00", function () {
 });
 
 test("correctly convert 12:00 pm", function () {
-  assert.equal(formatAs12HourClock("12:00"), "12:00 pm")
-})
+  assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
+});
+
+test("correctly convert 1 minute before 12:00pm", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
+});
