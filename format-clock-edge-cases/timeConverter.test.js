@@ -38,7 +38,7 @@ test("correctly convert half hour after 12:00", function () {
   assert.equal(formatAs12HourClock("13:30"), "1:30 pm");
 });
 
-test("correctly convert half hour after 12:00", function () {
+test("correctly convert half hour before midnight", function () {
   assert.equal(formatAs12HourClock("23:30"), "11:30 pm");
 });
 
