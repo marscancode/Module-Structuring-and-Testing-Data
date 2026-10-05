@@ -49,3 +49,7 @@ test("correctly convert 12:00 pm", function () {
 test("correctly convert 1 minute before 12:00pm", function () {
   assert.equal(formatAs12HourClock("11:59"), "11:59 am");
 });
+
+test("correctly convert 1 minute before midnight", function () {
+  assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
+});
