@@ -9,17 +9,17 @@ import { getAngleType } from "../implement/1-get-angle-type.js";
 test("Classifies right angles", () => {
   const right = getAngleType(90);
   assert.equal(right, "Right angle");
-
-  const eightyNine = getAngleType(89);
-  assert.equal(right, "Right angle");
-
-  const fortyFive = getAngleType(45);
-  assert.equal(right, "Right angle");
 });
 
 test("Classifies acute angle", () => {
-  const acuteAngle = getAngleType(30);
-  assert.equal(acuteAngle, "Acute angle");
+  const thirty = getAngleType(30);
+  assert.equal(thirty, "Acute angle");
+
+  const eightyNine = getAngleType(89);
+  assert.equal(eightyNine, "Acute angle");
+
+  const fortyFive = getAngleType(45);
+  assert.equal(fortyFive, "Acute angle");
 });
 
 test("Classifies obtuse angles", () => {
