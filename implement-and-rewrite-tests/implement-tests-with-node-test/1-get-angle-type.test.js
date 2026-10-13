@@ -56,4 +56,7 @@ test("Classifies invalid angles", () => {
 
   const fiveHundred = getAngleType(500);
   assert.equal(fiveHundred, "Invalid angle");
+
+  const threeHundredAndSixty = getAngleType(360);
+  assert.equal(threeHundredAndSixty, "Invalid angle");
 });
