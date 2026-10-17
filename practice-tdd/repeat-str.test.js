@@ -24,7 +24,7 @@ test("should return the original string when count equals 1", () => {
   const str = "hello";
   const count = 1;
   const repeatedStr = repeatStr(str, count);
-  expect(repeatStr).toEqual("hello");
+  expect(repeatedStr).toEqual("hello");
 });
 
 // Case: Handle count of 0:
