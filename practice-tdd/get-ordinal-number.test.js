@@ -28,3 +28,9 @@ test('should append "nd" to numbers ending in 2, apart from those ending in 12',
   expect(getOrdinalNumber(32)).toEqual("32nd");
   expect(getOrdinalNumber(142)).toEqual("142nd");
 });
+
+test('should append "rd" to numbers ending in 3, apart from those ending in 13', () => {
+  expect(getOrdinalNumber(3)).toEqual("3rd");
+  expect(getOrdinalNumber(33)).toEqual("33rd");
+  expect(getOrdinalNumber(143)).toEqual("143rd");
+});
