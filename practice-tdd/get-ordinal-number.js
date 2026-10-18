@@ -11,5 +11,7 @@ export function getOrdinalNumber(num) {
     return `${num}th`;
   } else if (num % 10 === 3) {
     return `${num}rd`;
+  } else {
+    return `${num}th`;
   }
 }
