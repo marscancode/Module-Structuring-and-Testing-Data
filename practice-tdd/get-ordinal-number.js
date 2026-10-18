@@ -1,3 +1,5 @@
 export function getOrdinalNumber(num) {
-  return "1st";
+  if (num % 10 === 1) {
+    return `${num}st`;
+  }
 }
