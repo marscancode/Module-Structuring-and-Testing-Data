@@ -28,3 +28,10 @@ test("should return 0 when character does not occur", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+test("should return 0 when string is empty", () => {
+  const str = "";
+  const char = "e";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
