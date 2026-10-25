@@ -15,6 +15,17 @@ test("Proper fraction numerator is 0", () => {
   assert.equal(isProperFraction(0, 1), true);
 });
 
+test("Proper fraction with a negative numerator but positive denominator", () => {
+  assert.equal(isProperFraction(-2, 3), true);
+});
+test("Proper fraction with a positive numerator but negative denominator", () => {
+  assert.equal(isProperFraction(2, -3), true);
+});
+
+test("Proper fraction with both a negative numerator and denominator", () => {
+  assert.equal(isProperFraction(-2, -3), true);
+});
+
 test("Improper fraction denominator is 0", () => {
   assert.equal(isProperFraction(1, 0), false);
 });
