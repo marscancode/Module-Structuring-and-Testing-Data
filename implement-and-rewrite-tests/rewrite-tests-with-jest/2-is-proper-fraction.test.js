@@ -21,3 +21,15 @@ test(`should return true when is a proper fraction`, () => {
 test(`should return true when numerator is 0`, () => {
   expect(isProperFraction(0, 1)).toEqual(true);
 });
+
+test(`proper fraction with a negative numerator but positive denominator`, () => {
+  expect(isProperFraction(-2, 3)).toEqual(true);
+});
+
+test(`proper fraction with a positive numerator but negative denominator`, () => {
+  expect(isProperFraction(2, -3)).toEqual(true);
+});
+
+test(`proper fraction with both a negative numerator and denominator`, () => {
+  expect(isProperFraction(-2, -3)).toEqual(true);
+});
