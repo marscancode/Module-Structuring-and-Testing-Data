@@ -62,54 +62,54 @@ describe("Returns 10 when given (Q,J or K) cards", () => {
 describe("Invalid Cards", () => {
   test("Throws an error when given an empty string", () => {
     expect(() => getCardValue("")).toThrow(
-      /Expected a valid number followed by a suit, but got ""/
+      'Expected a valid number followed by a suit, but got ""'
     );
   });
   test("Arbitrary non-card string", () => {
     expect(() => getCardValue("invalid")).toThrow(
-      /Expected a valid number followed by a suit, but got "invalid"/
+      'Expected a valid number followed by a suit, but got "invalid"'
     );
   });
 
   test("Invalid card rank with no suit", () => {
     expect(() => getCardValue("15")).toThrow(
-      /Expected a valid number followed by a suit, but got "15"/
+      'Expected a valid number followed by a suit, but got "15"'
     );
   });
 
   test("A valid card rank but invalid suit", () => {
     expect(() => getCardValue("8Z")).toThrow(
-      /Expected a valid number followed by a suit, but got "8Z"/
+      'Expected a valid number followed by a suit, but got "8Z"'
     );
   });
 
   test("A valid suit but invalid card rank", () => {
     expect(() => getCardValue("26♣")).toThrow(
-      /Expected a valid number followed by a suit, but got "26♣"/
+      'Expected a valid number followed by a suit, but got "26♣"'
     );
   });
 
   test("Rank and suit with an extra letter", () => {
     expect(() => getCardValue("5♣l")).toThrow(
-      /Expected a valid number followed by a suit, but got "5♣l"/
+      'Expected a valid number followed by a suit, but got "5♣l"'
     );
   });
 
   test("Two suits", () => {
     expect(() => getCardValue("♣♠")).toThrow(
-      /Expected a valid number followed by a suit, but got "♣♠"/
+      'Expected a valid number followed by a suit, but got "♣♠"'
     );
   });
 
   test("A negative rank but valid suit", () => {
     expect(() => getCardValue("-4♣")).toThrow(
-      /Expected a valid number followed by a suit, but got "-4♣"/
+      'Expected a valid number followed by a suit, but got "-4♣"'
     );
   });
 
   test("Invalid rank 0 but valid suit", () => {
     expect(() => getCardValue("0♥")).toThrow(
-      /Expected a valid number followed by a suit, but got "0♥"/
+      'Expected a valid number followed by a suit, but got "0♥"'
     );
   });
 });
