@@ -10,11 +10,18 @@ import { countChar } from "./count.js";
 // When the function is called with these inputs,
 // Then it should correctly count occurrences of `char`.
 
-test("should count multiple occurrences of a character", () => {
+test("should count a character when every character in the string matches", () => {
   const str = "aaaaa";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(5);
+});
+
+test("should count multiple occurrences of a character in a mixed string", () => {
+  const str = "occurrence";
+  const char = "c";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
 });
 
 // Scenario: No Occurrences
